@@ -65,7 +65,7 @@ public class ToDoListApp extends JFrame {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM tasks");
             tableModel.setColumnIdentifiers(new String[]{"ID", "Task", "Status"});
-            tableModel.setRowCount(0); // Clear existing rows
+            tableModel.setRowCount(0000); // Clear existing rows
             while (resultSet.next()) {
                 tableModel.addRow(new Object[]{
                         resultSet.getInt("id"),
@@ -128,8 +128,15 @@ public class ToDoListApp extends JFrame {
             JOptionPane.showMessageDialog(this, "Please select a task to delete.", "Warning", JOptionPane.WARNING_MESSAGE);
         }
     }
+    // modified foe understanding concept of branch and pul requests
+//    vbcv
+//    cvbc
+//            vb
+//    cvb
+
 
     public static void main(String[] args) {
+
         SwingUtilities.invokeLater(ToDoListApp::new);
     }
 }
